@@ -1,0 +1,206 @@
+/* CSS for the overall layout and design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d7e9dd;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.slider img {
+    width: 16.66%;
+    height: auto;
+}
+
+.about-us {
+    padding: 20px;
+    background-color: #eaf4ea;
+}
+
+.board-of-trustees {
+    padding: 20px;
+    background-color: #d7e9dd;
+    text-align: center;
+}
+
+.trustees {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.trustee {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.trustee img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trustee h3 {
+    margin: 10px 0 5px;
+}
+
+.trustee p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.inquiries {
+    padding: 20px;
+    background-color: #eaf4ea;
+    display: flex;
+    justify-content: center;
+}
+
+.inquiries-form-container {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #334FFF;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea, form button {
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+}
+
+footer {
+    background-color: #d7e9dd;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* CSS for the overall layout and design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d7e9dd;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.bride-category {
+    margin-bottom: 20px;
+}
+
+.dress-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dress-gallery img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 200px; /* Ensures the images fit properly */
+}
+
+footer {
+    background-color: #d7e9dd;
+    text-align: center;
+    padding: 10px 0;
+}
