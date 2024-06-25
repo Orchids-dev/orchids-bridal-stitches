@@ -1,14 +1,22 @@
-/* CSS for the overall layout and design */
+/* styles.css */
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8f5;
-    color: #333;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #d7e9dd;
+    background-color: #334FFF;
+    color: white;
     padding: 10px 0;
     text-align: center;
 }
@@ -19,101 +27,192 @@ header {
     align-items: center;
 }
 
-.logo {
-    height: 80px;
+.logo-container img {
+    margin-left: 10px;
 }
 
 nav {
-    background-color: #ffffff;
+    background-color: #334FFF;
+    color: white;
     padding: 10px 0;
+    text-align: center;
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .nav-menu li {
-    margin: 0 15px;
+    display: inline;
+    margin: 0 10px;
 }
 
-.nav-menu a {
+.nav-menu li a {
+    color: white;
     text-decoration: none;
-    color: #333;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #728C00;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #334FFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.marquee {
+    background-color: DodgerBlue;
+    color: white;
+    padding: 10px 0;
     font-weight: bold;
 }
 
-.slider-container {
-    width: 100%;
-    overflow: hidden;
+.about-us, .bridal-dresses, .bridal-shoes, .events {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.slider {
+.dress-category, .shoe-gallery {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.slider img {
-    width: 16.66%;
-    height: auto;
+.dress-gallery img, .shoe-gallery img {
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.about-us {
-    padding: 20px;
-    background-color: #eaf4ea;
-}
-
-.board-of-trustees {
-    padding: 20px;
-    background-color: #d7e9dd;
-    text-align: center;
+.dress-gallery img:hover, .shoe-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .trustees {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .trustee {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
 }
 
 .trustee img {
-    width: 150px;
-    height: 150px;
     border-radius: 50%;
-    object-fit: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.trustee h3 {
-    margin: 10px 0 5px;
+.trustee img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.trustee p {
-    margin: 0;
-    font-size: 14px;
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.inquiries {
-    padding: 20px;
-    background-color: #eaf4ea;
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, .caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.main-centered {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: calc(100vh - 40px); /* Adjusted to account for header and footer heights */
+    background-color: #f0f0f0;
 }
 
-.inquiries-form-container {
-    width: 100%;
-    max-width: 600px;
-    border: 2px solid #334FFF;
+.form-container {
+    background-color: white;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
 form {
@@ -121,86 +220,26 @@ form {
     flex-direction: column;
 }
 
-form label, form input, form textarea, form button {
-    margin-bottom: 10px;
-}
-
-form input, form textarea {
-    padding: 10px;
-}
-
-footer {
-    background-color: #d7e9dd;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* CSS for the overall layout and design */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #d7e9dd;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    height: 80px;
-}
-
-nav {
-    background-color: #ffffff;
-    padding: 10px 0;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-.nav-menu li {
-    margin: 0 15px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #333;
+label {
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
-.bride-category {
-    margin-bottom: 20px;
+input, textarea, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.dress-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.dress-gallery img {
-    max-width: 100%;
-    height: auto;
-    flex: 1 1 200px; /* Ensures the images fit properly */
-}
-
-footer {
-    background-color: #d7e9dd;
-    text-align: center;
-    padding: 10px 0;
+button:hover {
+    background-color: #45a049;
 }
